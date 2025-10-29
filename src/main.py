@@ -57,7 +57,7 @@ class Smile(Adw.Application):
             self.window = Picker(application=self)
 
             self.create_action("preferences", lambda w, e: self.on_preferences_action())
-            self.create_action("open_shortcuts", lambda w, e: ShortcutsWindow().open())
+            self.create_action("open_shortcuts", lambda w, e: ShortcutsWindow(transient_for=self.props.active_window).open())
             self.create_action("open_changelog", lambda w, e: Gtk.UriLauncher.new('https://smile.mijorus.it/changelog').launch())
             self.create_action("translate", lambda w, e: Gtk.UriLauncher.new('https://github.com/mijorus/smile/tree/master/po').launch())
             self.create_action("gnome_extension", lambda w, e: Gtk.UriLauncher.new(GNOME_EXTENSION_LINK).launch())

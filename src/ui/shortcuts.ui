@@ -1,183 +1,116 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
-    <object class="GtkShortcutsWindow" id="shortcuts">
-        <property name="modal">1</property>
+    <requires lib="gtk" version="4.0"/>
+    <requires lib="adw" version="1.0"/>
+    <object class="AdwShortcutsDialog" id="shortcuts">
+        <property name="title" translatable="yes">Shortcuts</property>
         <child>
-            <object class="GtkShortcutsSection">
-                <property name="visible">True</property>
-                <property name="section-name">shortcuts</property>
+            <object class="AdwShortcutsSection">
+                <property name="title" translatable="yes">Mouse</property>
                 <child>
-                    <object class="GtkShortcutsGroup">
-                        <property name="visible">True</property>
-                        <property name="title" translatable="yes">Mouse</property>
-                        <child>
-                            <object class="GtkBox">
-                                <child>
-                                    <object class="GtkShortcutLabel">
-                                        <property name="width-request">190</property>
-                                        <child>
-                                            <object class="GtkLabel">
-                                                <property name="label">Left Click</property>
-                                                <property name="css-classes">keycap</property>
-                                            </object>
-                                        </child>
-                                    </object>
-                                </child>
-                                <child>
-                                    <object id="left-click-label" class="GtkLabel">
-                                        <property name="label" translatable="yes"></property>
-                                    </object>
-                                </child>
-                            </object>
-                        </child>
-                        <child>
-                            <object class="GtkBox">
-                                <child>
-                                    <object class="GtkShortcutLabel">
-                                        <property name="width-request">190</property>
-                                        <child>
-                                            <object class="GtkLabel">
-                                                <property name="label">Right Click</property>
-                                                <property name="css-classes">keycap</property>
-                                            </object>
-                                        </child>
-                                    </object>
-                                </child>
-                                <child>
-                                    <object class="GtkLabel">
-                                        <property name="label" translatable="yes">Open the skintone selector (if available)</property>
-                                    </object>
-                                </child>
-                            </object>
-                        </child>
-                        <child>
-                            <object class="GtkBox">
-                                <child>
-                                    <object class="GtkShortcutLabel">
-                                        <property name="width-request">190</property>
-                                        <child>
-                                            <object class="GtkLabel">
-                                                <property name="label">Middle Click</property>
-                                                <property name="css-classes">keycap</property>
-                                            </object>
-                                        </child>
-                                    </object>
-                                </child>
-                                <child>
-                                    <object class="GtkLabel">
-                                        <property name="label" translatable="yes">Add a custom tag</property>
-                                    </object>
-                                </child>
-                            </object>
-                        </child>
-                        <child>
-                            <object class="GtkBox">
-                                <child>
-                                    <object class="GtkShortcutLabel">
-                                        <property name="width-request">190</property>
-                                        <child>
-                                            <object class="GtkLabel">
-                                                <property name="label">Shift</property>
-                                                <property name="css-classes">keycap</property>
-                                            </object>
-                                        </child>
-                                        <child>
-                                            <object class="GtkLabel">
-                                                <property name="label">+</property>
-                                            </object>
-                                        </child>
-                                        <child>
-                                            <object class="GtkLabel">
-                                                <property name="label">Left Click</property>
-                                                <property name="css-classes">keycap</property>
-                                            </object>
-                                        </child>
-                                    </object>
-                                </child>
-                                <child>
-                                    <object id="shift-left-click-label" class="GtkLabel">
-                                        <property name="label" translatable="yes"></property>
-                                    </object>
-                                </child>
-                            </object>
-                        </child>
+                    <object class="AdwShortcutsItem" id="left-click-item">
+                        <property name="title" translatable="yes">Left Click</property>
+                        <property name="subtitle" translatable="yes"></property>
                     </object>
                 </child>
                 <child>
-                    <object class="GtkShortcutsGroup">
-                        <property name="visible">True</property>
-                        <property name="title" translatable="yes">Keyboard</property>
-                        <child>
-                            <object class="GtkShortcutsShortcut">
-                                <property name="visible">True</property>
-                                <property name="accelerator">Return</property>
-                                <property name="title" translatable="yes">Copy the selected emoji and hide the window (When an emoji is highlighted)</property>
-                            </object>
-                        </child>
-                        <child>
-                            <object class="GtkShortcutsShortcut">
-                                <property name="visible">True</property>
-                                <property name="accelerator">Return</property>
-                                <property name="title" translatable="yes">Copy first emoji and hide the window (When using the search bar)</property>
-                            </object>
-                        </child>
-                        <child>
-                            <object class="GtkShortcutsShortcut">
-                                <property name="visible">True</property>
-                                <property name="accelerator">&lt;alt&gt;Right</property>
-                                <property name="title" translatable="yes">Show the category on the right</property>
-                            </object>
-                        </child>
-                        <child>
-                            <object class="GtkShortcutsShortcut">
-                                <property name="visible">True</property>
-                                <property name="accelerator">&lt;alt&gt;Left</property>
-                                <property name="title" translatable="yes">Show the category on the left</property>
-                            </object>
-                        </child>
-                        <child>
-                            <object class="GtkShortcutsShortcut">
-                                <property name="visible">True</property>
-                                <property name="accelerator">&lt;shift&gt;Return</property>
-                                <property name="title" translatable="yes">Add an emoji to selection</property>
-                            </object>
-                        </child>
-
-                        <child>
-                            <object class="GtkShortcutsShortcut">
-                                <property name="visible">True</property>
-                                <property name="accelerator">&lt;shift&gt;BackSpace</property>
-                                <property name="title" translatable="yes">Remove the last emoji from the selection</property>
-                            </object>
-                        </child>
-                        <child>
-                            <object class="GtkShortcutsShortcut">
-                                <property name="visible">True</property>
-                                <property name="accelerator">&lt;ctrl&gt;Return</property>
-                                <property name="title" translatable="yes">Copy the selection and hide the window, without the highlighted emoji</property>
-                            </object>
-                        </child>
-                        <child>
-                            <object class="GtkShortcutsShortcut">
-                                <property name="visible">True</property>
-                                <property name="accelerator">&lt;alt&gt;E</property>
-                                <property name="title" translatable="yes">Open the skintone selector (if available)</property>
-                            </object>
-                        </child>
-                        <child>
-                            <object class="GtkShortcutsShortcut">
-                                <property name="visible">True</property>
-                                <property name="accelerator">&lt;alt&gt;T</property>
-                                <property name="title" translatable="yes">Add a custom tag</property>
-                            </object>
-                        </child>
-                        <child>
-                            <object class="GtkShortcutsShortcut">
-                                <property name="visible">True</property>
-                                <property name="accelerator">&lt;ctrl&gt;q</property>
-                                <property name="title" translatable="yes">Quit the application</property>
-                            </object>
-                        </child>
+                    <object class="AdwShortcutsItem">
+                        <property name="title" translatable="yes">Right Click</property>
+                        <property name="subtitle" translatable="yes">Open the skintone selector (if available)</property>
+                    </object>
+                </child>
+                <child>
+                    <object class="AdwShortcutsItem">
+                        <property name="title" translatable="yes">Middle Click</property>
+                        <property name="subtitle" translatable="yes">Add a custom tag</property>
+                    </object>
+                </child>
+                <child>
+                    <object class="AdwShortcutsItem" id="shift-left-click-item">
+                        <property name="title" translatable="yes">Shift + Left Click</property>
+                        <property name="subtitle" translatable="yes"></property>
+                    </object>
+                </child>
+            </object>
+        </child>
+        <child>
+            <object class="AdwShortcutsSection">
+                <property name="title" translatable="yes">Keyboard</property>
+                <child>
+                    <object class="AdwShortcutsItem">
+                        <property name="title" translatable="yes">Copy the selected emoji and hide the window (When an emoji is highlighted)</property>
+                        <property name="accelerator">Return</property>
+                    </object>
+                </child>
+                <child>
+                    <object class="AdwShortcutsItem">
+                        <property name="title" translatable="yes">Copy first emoji and hide the window (When using the search bar)</property>
+                        <property name="accelerator">Return</property>
+                    </object>
+                </child>
+                <child>
+                    <object class="AdwShortcutsItem">
+                        <property name="title" translatable="yes">Show the category on the right</property>
+                        <property name="accelerator">&lt;Alt&gt;Right</property>
+                        <property name="direction">ltr</property>
+                    </object>
+                </child>
+                <child>
+                    <object class="AdwShortcutsItem">
+                        <property name="title" translatable="yes">Show the category on the left</property>
+                        <property name="accelerator">&lt;Alt&gt;Left</property>
+                        <property name="direction">ltr</property>
+                    </object>
+                </child>
+                <!-- RTL variants to reflect reversed arrow keys -->
+                <child>
+                    <object class="AdwShortcutsItem">
+                        <property name="title" translatable="yes">Show the category on the right</property>
+                        <property name="accelerator">&lt;Alt&gt;Left</property>
+                        <property name="direction">rtl</property>
+                    </object>
+                </child>
+                <child>
+                    <object class="AdwShortcutsItem">
+                        <property name="title" translatable="yes">Show the category on the left</property>
+                        <property name="accelerator">&lt;Alt&gt;Right</property>
+                        <property name="direction">rtl</property>
+                    </object>
+                </child>
+                <child>
+                    <object class="AdwShortcutsItem">
+                        <property name="title" translatable="yes">Add an emoji to selection</property>
+                        <property name="accelerator">&lt;Shift&gt;Return</property>
+                    </object>
+                </child>
+                <child>
+                    <object class="AdwShortcutsItem">
+                        <property name="title" translatable="yes">Remove the last emoji from the selection</property>
+                        <property name="accelerator">&lt;Shift&gt;BackSpace</property>
+                    </object>
+                </child>
+                <child>
+                    <object class="AdwShortcutsItem">
+                        <property name="title" translatable="yes">Copy the selection and hide the window, without the highlighted emoji</property>
+                        <property name="accelerator">&lt;Control&gt;Return</property>
+                    </object>
+                </child>
+                <child>
+                    <object class="AdwShortcutsItem">
+                        <property name="title" translatable="yes">Open the skintone selector (if available)</property>
+                        <property name="accelerator">&lt;Alt&gt;E</property>
+                    </object>
+                </child>
+                <child>
+                    <object class="AdwShortcutsItem">
+                        <property name="title" translatable="yes">Add a custom tag</property>
+                        <property name="accelerator">&lt;Alt&gt;T</property>
+                    </object>
+                </child>
+                <child>
+                    <object class="AdwShortcutsItem">
+                        <property name="title" translatable="yes">Quit the application</property>
+                        <property name="action-name">app.quit</property>
                     </object>
                 </child>
             </object>
