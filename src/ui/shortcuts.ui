@@ -3,46 +3,16 @@
     <object class="AdwShortcutsDialog" id="shortcuts">
         <child>
             <object class="AdwShortcutsSection">
-                <property name="title" translatable="yes">Mouse</property>
-                <child>
-                    <object class="AdwShortcutsItem" id="left-click-item">
-                        <property name="accelerator">Pointer_Button1</property>
-                        <property name="title" translatable="yes">Add an emoji to selection</property>
-                    </object>
-                </child>
-                <child>
-                    <object class="AdwShortcutsItem">
-                        <property name="accelerator">Pointer_Button3</property>
-                        <property name="title" translatable="yes">Open the skintone selector (if available)</property>
-                    </object>
-                </child>
-                <child>
-                    <object class="AdwShortcutsItem">
-                        <property name="accelerator">Pointer_Button2</property>
-                        <property name="title" translatable="yes">Add a custom tag</property>
-                    </object>
-                </child>
-                <child>
-                    <object class="AdwShortcutsItem" id="shift-left-click-item">
-                        <property name="accelerator">&lt;Shift&gt;Pointer_Button1</property>
-                        <property name="title" translatable="yes">Copy the selected emoji and hide the window</property>
-                    </object>
-                </child>
-            </object>
-        </child>
-        <child>
-            <object class="AdwShortcutsSection">
-                <property name="title" translatable="yes">Keyboard</property>
                 <child>
                     <object class="AdwShortcutsItem">
                         <property name="accelerator">Return</property>
-                        <property name="title" translatable="yes">Copy the selected emoji and hide the window (When an emoji is highlighted)</property>
+                        <property name="title" translatable="yes">Copy selected emoji and hide window (when emoji highlighted)</property>
                     </object>
                 </child>
                 <child>
                     <object class="AdwShortcutsItem">
                         <property name="accelerator">Return</property>
-                        <property name="title" translatable="yes">Copy first emoji and hide the window (When using the search bar)</property>
+                        <property name="title" translatable="yes">Copy first emoji and hide window (when using search bar)</property>
                     </object>
                 </child>
                 <child>
@@ -72,7 +42,7 @@
                 <child>
                     <object class="AdwShortcutsItem">
                         <property name="accelerator">&lt;Ctrl&gt;Return</property>
-                        <property name="title" translatable="yes">Copy the selection and hide the window, without the highlighted emoji</property>
+                        <property name="title" translatable="yes">Copy selection and hide window, without highlighted emoji</property>
                     </object>
                 </child>
                 <child>
